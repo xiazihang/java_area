@@ -35,6 +35,8 @@ dependencies {
     // tag::actuator[]
     compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("org.springframework.boot:spring-boot-starter-security")
+    compile group: 'redis.clients', name: 'jedis', version: '2.9.0'
+
 
     // end::actuator[]
     testCompile("junit:junit")
