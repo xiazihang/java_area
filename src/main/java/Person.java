@@ -1,3 +1,8 @@
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.io.File;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -9,10 +14,31 @@ import static java.util.stream.Collectors.toList;
  *
  * @author zhxia, @date 1/4/17 11:56 PM
  */
+@XmlRootElement(name = "Person")
 public class Person {
     private int age;
     private String name;
     private String gender;
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public Person() {
+
+    }
 
     public Person(int age, String name, String gender) {
         this.age = age;
@@ -30,6 +56,19 @@ public class Person {
 
     public static List<Person> filterAdultMan(List<Person> persons) {
         return persons.stream().filter(isAdultMan()).collect(toList());
+    }
+
+    public static void main(String[] args) throws JAXBException {
+        Person person = new Person();
+        person.setAge(12);
+        person.setGender("M");
+        person.setName("xzh");
+        JAXBContext jaxbContext = JAXBContext.newInstance(Person.class);
+        Marshaller marshaller = jaxbContext.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        marshaller.marshal(person, new File("person.xml"));
+        marshaller.marshal(person, System.out);
+
     }
 
     private static Predicate<Person> isAdultMan() {
