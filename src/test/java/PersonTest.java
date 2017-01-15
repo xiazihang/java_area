@@ -1,5 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.boot.SpringBootConfiguration;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import static org.hamcrest.core.Is.is;
  *
  * @author zhxia, @date 1/4/17 11:56 PM
  */
+
 public class PersonTest {
 
     private List<Person> persons;
