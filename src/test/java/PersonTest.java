@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.jdbc.BadSqlGrammarException;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 
 import java.util.List;
 
