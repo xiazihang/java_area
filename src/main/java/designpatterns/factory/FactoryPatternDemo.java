@@ -1,9 +1,9 @@
-package designpatterns.factorypatter;
+package designpatterns.factory;
 
-import static designpatterns.factorypatter.ShapeFactory.getShape;
-import static designpatterns.factorypatter.ShapeType.CIRCLE;
-import static designpatterns.factorypatter.ShapeType.RECTANGLE;
-import static designpatterns.factorypatter.ShapeType.SQUARE;
+import static designpatterns.factory.ShapeFactory.getShape;
+import static designpatterns.factory.ShapeType.CIRCLE;
+import static designpatterns.factory.ShapeType.RECTANGLE;
+import static designpatterns.factory.ShapeType.SQUARE;
 
 /**
  * Created by zhxia on 20/04/2017.
