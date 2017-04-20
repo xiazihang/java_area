@@ -1,7 +1,7 @@
-package designpatterns.factorypatter;
+package designpatterns.factory;
 
-import static designpatterns.factorypatter.ShapeType.CIRCLE;
-import static designpatterns.factorypatter.ShapeType.RECTANGLE;
+import static designpatterns.factory.ShapeType.CIRCLE;
+import static designpatterns.factory.ShapeType.RECTANGLE;
 
 /**
  * Created by zhxia on 20/04/2017.
